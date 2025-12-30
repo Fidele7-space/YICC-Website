@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YICC - About</title>
-  <link rel="stylesheet" href="./about.css" />
+  <title>YICC — About</title>
+   <link rel="stylesheet" href="./about.css" />
 </head>
+
 <body>
   <div class="shell">
+
     <!-- TOP BAR -->
     <header class="topbar">
       <div class="brand">
         <div class="brand-badge">
-          <!-- Replace this src with your logo -->
+          <!-- CHANGE THIS: your logo -->
           <img src="./assets/yicc-logo.jpg" alt="YICC Logo" />
         </div>
         <div>
@@ -23,7 +25,6 @@
 
       <nav class="nav" aria-label="Primary navigation">
         <a href="#">
-          <!-- home icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 10.5 12 3l9 7.5"></path>
@@ -33,7 +34,6 @@
         </a>
 
         <a class="active" href="#" aria-current="page">
-          <!-- info icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="9"></circle>
@@ -44,7 +44,6 @@
         </a>
 
         <a href="#">
-          <!-- list icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 7h14"></path>
@@ -58,7 +57,6 @@
         </a>
 
         <a href="#">
-          <!-- target icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="9"></circle>
@@ -69,7 +67,6 @@
         </a>
 
         <a href="#">
-          <!-- users icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
@@ -81,7 +78,6 @@
         </a>
 
         <a href="#">
-          <!-- mail icon -->
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 4h16v16H4z"></path>
@@ -96,40 +92,230 @@
       </button>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main">
-      <section class="content">
-        <div>
-          <h1 class="title">What is <span>YICC</span>?</h1>
+    <!-- HERO: What is YICC? -->
+    <section class="section hero">
+      <div>
+        <h1 class="title">What is <span>YICC</span>?</h1>
 
-          <p class="p">
-            Youth Initiative in Climate Change (YICC) is a youth-led movement dedicated to
-            advancing SDG 13: Climate Action in Rwanda. What began as a high school tree-planting
-            project has evolved into a comprehensive initiative.
+        <p class="p">
+          Youth Initiative in Climate Change (YICC) is a youth-led movement dedicated to advancing SDG 13:
+          Climate Action in Rwanda. What began as a high school tree-planting project has evolved into a
+          comprehensive initiative.
+        </p>
+
+        <p class="p">
+          We equip young people with the knowledge and skills to implement both mitigation and adaptation strategies.
+          Our mission is to empower Rwandan high school students and youth to become environmental leaders.
+        </p>
+
+        <p class="p emph">
+          The urgency of climate change demands immediate action. Rising temperatures threaten ecosystems, livelihoods,
+          and human survival— but we believe youth hold the potential to drive change.
+        </p>
+
+        <p class="quote">Because there is no Planet B.</p>
+      </div>
+
+      <aside>
+        <div class="image-card">
+          <!-- CHANGE THIS: your main About image -->
+          <img src="./assets/about-hero.jpg" alt="YICC activity photo" />
+        </div>
+      </aside>
+    </section>
+
+    <!-- OUR VISION CARD -->
+    <section class="section">
+      <div class="big-card">
+        <div class="big-card-row">
+          <div class="badge" aria-hidden="true">
+            <!-- eye icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </div>
+
+          <div>
+            <h2>Our Vision</h2>
+            <p class="big-quote">
+              “To build a climate-resilient Rwanda led by empowered youth who champion innovative, inclusive,
+              and sustainable solutions for a greener planet— because there is no Planet B.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES GRID -->
+    <section class="section">
+      <div class="values-grid">
+        <!-- 1 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- people icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="3"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a3 3 0 0 1 0 5.74"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Youth Empowerment</h3>
+          </div>
+          <p class="value-text">
+            We believe in the potential of young people to lead change through platforms, tools, and opportunities.
           </p>
-
-          <p class="p">
-            We equip young people with the knowledge and skills to implement both mitigation and
-            adaptation strategies. Our mission is to empower Rwandan high school students and youth
-            to become environmental leaders.
-          </p>
-
-          <p class="p emph">
-            The urgency of climate change demands immediate action. Rising temperatures threaten ecosystems,
-            livelihoods, and human survival - but we believe youth hold the potential to drive change.
-          </p>
-
-          <p class="quote">Because there is no Planet B.</p>
         </div>
 
-        <aside>
-          <div class="image-card">
-            <!-- Replace this src with your main About image -->
-            <img src="./assets/about-hero.jpg" alt="YICC activity photo" />
+        <!-- 2 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- bulb icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+                <path d="M12 2a7 7 0 0 0-4 12c.7.6 1 1.2 1 2h6c0-.8.3-1.4 1-2A7 7 0 0 0 12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Innovation for Impact</h3>
           </div>
-        </aside>
-      </section>
-    </main>
+          <p class="value-text">
+            We value creativity and forward-thinking solutions, encouraging bold innovation to solve complex issues.
+          </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- heart icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Environmental Stewardship</h3>
+          </div>
+          <p class="value-text">
+            Committed to protecting our natural environment through sustainable practices and responsible actions.
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- shield icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Collaboration &amp; Inclusion</h3>
+          </div>
+          <p class="value-text">
+            Working with diverse stakeholders to ensure climate action is inclusive, participatory, and united.
+          </p>
+        </div>
+
+        <!-- 5 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- check-circle icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M8 12l2.5 2.5L16 9"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Integrity &amp; Accountability</h3>
+          </div>
+          <p class="value-text">
+            Acting with transparency and honesty, accountable to the communities we serve.
+          </p>
+        </div>
+
+        <!-- 6 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- bolt icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h7l-1 8 12-14h-7l-1-6z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Resilience &amp; Sustainability</h3>
+          </div>
+          <p class="value-text">
+            Focusing on long-term solutions that build resilience in communities and ecosystems.
+          </p>
+        </div>
+
+        <!-- 7 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- book icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19a2 2 0 0 0 2 2h14"></path>
+                <path d="M6 2h14v16H6a2 2 0 0 0-2 2V4a2 2 0 0 1 2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Education &amp; Awareness</h3>
+          </div>
+          <p class="value-text">
+            Knowledge is power. We prioritize education to cultivate environmental consciousness.
+          </p>
+        </div>
+
+        <!-- 8 -->
+        <div class="value-card">
+          <div class="value-top">
+            <div class="mini-badge" aria-hidden="true">
+              <!-- heart icon (again, matches screenshot vibe) -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"></path>
+              </svg>
+            </div>
+            <h3 class="value-title">Action-Oriented Leadership</h3>
+          </div>
+          <p class="value-text">
+            We don’t just talk— we act. Leading by example and turning ideas into real-world change.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY YOUTH LEADERSHIP MATTERS -->
+    <section class="section why">
+      <h2>Why <span class="accent">Youth Leadership</span> Matters</h2>
+
+      <p>
+        Despite increasing global youth engagement in climate action, many young people in Rwanda remain
+        disconnected from these efforts due to a lack of education, resources, and platforms for engagement.
+      </p>
+
+      <p>
+        The United Nations recognizes young people as key stakeholders in sustainable development, and the
+        2030 Agenda emphasizes their role in advancing climate adaptation and mitigation strategies.
+      </p>
+
+      <p class="em">
+        YICC was founded to bridge this gap and empower Rwandan youth to become proactive climate leaders in their
+        communities— because youth are not just the future, they are the now.
+      </p>
+    </section>
+
   </div>
 </body>
 </html>
