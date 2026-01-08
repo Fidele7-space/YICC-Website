@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate | JAF Global</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="index_styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo-container">
+        <img src="../assets/logo.jpeg" alt="JAF Global" class="logo-image">
+        <div class="logo-text">
+          <div class="logo-name">JAF GLOBAL</div>
+          <div class="logo-tagline">FUTURE FOCUS</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programs.html">PROGRAMS</a>
+        <a href="impact.html">IMPACT</a>
+        <a href="contact.html">CONTACT</a>
+        <div class="nav-buttons">
+          <a href="contact.html" class="btn-apply">APPLY</a>
+          <a href="donate.html" class="btn-donate">DONATE</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- DONATE HERO -->
+  <section class="donate-hero">
+    <div class="container">
+      <h1>Your Generosity <span class="highlight-light">Changes Lives</span></h1>
+      <p class="hero-subtitle">
+        Every contribution—big or small—creates real opportunity for talented youth 
+        who have the drive but lack the resources.
+      </p>
+    </div>
+  </section>
+
+  <!-- IMPACT STORIES -->
+  <section class="section">
+    <div class="container">
+      <h2 class="page-title">See the <span class="highlight">Difference</span> You Make</h2>
+      
+      <div class="impact-examples">
+        <div class="impact-card">
+          <div class="impact-visual">$50</div>
+          <h3>Can Provide</h3>
+          <ul class="impact-list">
+            <li>School supplies for 5 students</li>
+            <li>One climate education workshop</li>
+            <li>Agricultural training materials</li>
+          </ul>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-visual">$100</div>
+          <h3>Can Support</h3>
+          <ul class="impact-list">
+            <li>One student for a full month</li>
+            <li>Complete leadership training</li>
+            <li>Mentorship program access</li>
+          </ul>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-visual">$250</div>
+          <h3>Can Fund</h3>
+          <ul class="impact-list">
+            <li>Quarterly scholarship for one student</li>
+            <li>Full YICC program materials</li>
+            <li>Trade skills training package</li>
+          </ul>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-visual">$500+</div>
+          <h3>Can Transform</h3>
+          <ul class="impact-list">
+            <li>Full-year student sponsorship</li>
+            <li>Launch community project</li>
+            <li>Build lasting infrastructure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATION FORM -->
+  <section class="section light">
+    <div class="container">
+      <div class="donation-form-container">
+        <div class="donation-intro">
+          <h2>Make Your <span class="highlight">Contribution</span></h2>
+          <p>
+            Your donation goes directly to programs that empower youth with education, 
+            skills, and opportunities. Choose an amount that feels right for you.
+          </p>
+        </div>
+
+        <div class="donation-form-box">
+          <h3>Select or Enter Your Donation Amount</h3>
+          
+          <div class="amount-suggestions">
+            <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+            <button class="amount-btn" onclick="selectAmount(50)">$50</button>
+            <button class="amount-btn" onclick="selectAmount(100)">$100</button>
+            <button class="amount-btn" onclick="selectAmount(250)">$250</button>
+            <button class="amount-btn" onclick="selectAmount(500)">$500</button>
+            <button class="amount-btn" onclick="selectAmount(1000)">$1000</button>
+          </div>
+
+          <div class="custom-amount-section">
+            <label for="donationAmount">Or enter your own amount:</label>
+            <div class="amount-input-wrapper">
+              <span class="dollar-sign">$</span>
+              <input type="number" id="donationAmount" placeholder="Enter amount" min="1" step="1">
+            </div>
+          </div>
+
+          <div class="donation-frequency">
+            <label class="frequency-label">
+              <input type="radio" name="frequency" value="once" checked>
+              <span>One-time donation</span>
+            </label>
+            <label class="frequency-label">
+              <input type="radio" name="frequency" value="monthly">
+              <span>Monthly giving</span>
+            </label>
+          </div>
+
+          <div class="donor-info">
+            <input type="text" id="donorName" placeholder="Your Name" required>
+            <input type="email" id="donorEmail" placeholder="Your Email" required>
+          </div>
+
+          <div class="receipt-options">
+            <label class="receipt-label">
+              <input type="radio" name="receiptOption" value="email" checked>
+              <span>📧 Email my receipt</span>
+            </label>
+            <label class="receipt-label">
+              <input type="radio" name="receiptOption" value="download">
+              <span>📥 Download receipt after payment</span>
+            </label>
+          </div>
+
+          <button class="proceed-btn" onclick="proceedToDonate()">
+            <span id="btnText">To complete donation continue to Secure Payment</span>
+            <span id="btnLoader" style="display: none;">Processing...</span>
+          </button>
+
+          <div class="payment-methods">
+            <p>💳 Donation can be done via:</p>
+            <div class="payment-icons">
+              <span>PayPal</span>
+              <span>Visa Card</span>
+              <span>Mastercard</span>
+              <span>Discover</span>
+              <span>Amex</span>
+            </div>
+          </div>
+
+          <p class="donation-note">
+            🔒 Secure payment is powered by PayPal<br>
+            💚 Tax-deductible donation • You'll receive a receipt
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY DONATE -->
+  <section class="section why-donate-section">
+    <div class="container">
+      <h2 class="page-title">Why Your <span class="highlight">Support</span> Matters</h2>
+      
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🎯</div>
+          <h3>Direct Impact</h3>
+          <p>85% of every dollar goes directly to programs, ensuring maximum impact from your generosity.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">📊</div>
+          <h3>Proven Results</h3>
+          <p>92% program completion rate and 80% job placement—your donation creates measurable change.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">🔍</div>
+          <h3>Full Transparency</h3>
+          <p>Receive regular updates showing exactly how your contribution is transforming lives.</p>
+        </div>
+
+        <div class="why-item">
+          <div class="why-icon">🌱</div>
+          <h3>Lasting Change</h3>
+          <p>We build sustainable systems, not quick fixes—your gift creates opportunity for years to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER WAYS TO GIVE -->
+  <section class="section light">
+    <div class="container">
+      <h2 class="page-title">Other Ways to <span class="highlight">Give</span></h2>
+      
+      <div class="giving-methods">
+        <div class="method-card">
+          <h3>🏢 Corporate Partnership</h3>
+          <p>
+            Partner with JAF Global to create meaningful employee engagement and amplify 
+            your organization's social impact.
+          </p>
+          <a href="contact.html" class="btn-secondary">Explore Partnership</a>
+        </div>
+
+        <div class="method-card">
+          <h3>🎁 Honor & Memorial Gifts</h3>
+          <p>
+            Celebrate someone special or honor their memory with a donation that creates 
+            lasting impact in their name.
+          </p>
+          <a href="contact.html" class="btn-secondary">Give in Honor</a>
+        </div>
+
+        <div class="method-card">
+          <h3>📜 Legacy Giving</h3>
+          <p>
+            Include JAF Global in your estate planning and leave a legacy that empowers 
+            future generations.
+          </p>
+          <a href="contact.html" class="btn-secondary">Plan Your Legacy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL / IMPACT STORY -->
+  <section class="impact-story-section">
+    <div class="container">
+      <div class="story-content">
+        <div class="story-quote">
+          <p class="quote-text">
+            "Thanks to JAF Global, I was able to complete my education and now work 
+            as an environmental officer helping my community adapt to climate change. 
+            None of this would have been possible without the support of generous donors."
+          </p>
+          <p class="quote-author">— Student Success Story</p>
+        </div>
+        <div class="story-stats">
+          <div class="stat-box">
+            <span class="stat-num">500+</span>
+            <span class="stat-text">Lives Changed</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">15</span>
+            <span class="stat-text">Countries Reached</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num">92%</span>
+            <span class="stat-text">Completion Rate</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Every Gift Creates Opportunity</h2>
+      <p>
+        Join us in building access and creating futures. Your contribution—no matter 
+        the size—makes a real difference.
+      </p>
+      <button class="cta-donate-btn" onclick="scrollToForm()">Make Your Donation</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>PROGRAMS</h3>
+          <ul>
+            <li><a href="programs.html">YICC</a></li>
+            <li><a href="programs.html">Agriculture</a></li>
+            <li><a href="programs.html">Trade</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>IMPACT</h3>
+          <ul>
+            <li><a href="impact.html">Our Impact</a></li>
+            <li><a href="impact.html">Success Stories</a></li>
+            <li><a href="reports.html">Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>MONTHLY NEWSLETTER</h3>
+          <div class="footer-newsletter">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <p>© 2026 JAF Global. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="YouTube">▶️</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="LinkedIn">💼</a>
+          <a href="#" title="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index_script.js"></script>
+  <script>
+    let selectedAmount = 0;
+
+    function selectAmount(amount) {
+      selectedAmount = amount;
+      document.getElementById('donationAmount').value = amount;
+      
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.classList.remove('selected');
+      });
+      event.target.classList.add('selected');
+    }
+
+    async function proceedToDonate() {
+      const amount = document.getElementById('donationAmount').value;
+      const frequency = document.querySelector('input[name="frequency"]:checked').value;
+      const receiptOption = document.querySelector('input[name="receiptOption"]:checked').value;
+      const name = document.getElementById('donorName').value;
+      const email = document.getElementById('donorEmail').value;
+      
+      if (!amount || amount <= 0) {
+        alert('Please enter or select a donation amount.');
+        return;
+      }
+
+      if (!name) {
+        alert('Please enter your name.');
+        return;
+      }
+
+      if (!email) {
+        alert('Please enter your email address.');
+        return;
+      }
+      
+      // Show loading state
+      document.getElementById('btnText').style.display = 'none';
+      document.getElementById('btnLoader').style.display = 'inline';
+      document.querySelector('.proceed-btn').disabled = true;
+      
+      try {
+        // Send to backend
+        const response = await fetch('donate-handler.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            amount: parseFloat(amount),
+            frequency: frequency,
+            receiptOption: receiptOption,
+            name: name,
+            email: email
+          })
+        });
+        
+        const result = await response.json();
+        
+        if (result.success && result.approvalUrl) {
+          // Redirect to PayPal for payment
+          window.location.href = result.approvalUrl;
+        } else {
+          alert('Error creating donation: ' + (result.error || 'Unknown error'));
+          resetButton();
+        }
+      } catch (error) {
+        alert('Error processing donation. Please try again.');
+        console.error('Error:', error);
+        resetButton();
+      }
+    }
+
+    function resetButton() {
+      document.getElementById('btnText').style.display = 'inline';
+      document.getElementById('btnLoader').style.display = 'none';
+      document.querySelector('.proceed-btn').disabled = false;
+    }
+
+    function scrollToForm() {
+      document.querySelector('.donation-form-box').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+
+    document.getElementById('donationAmount').addEventListener('input', function() {
+      document.querySelectorAll('.amount-btn').forEach(btn => {
+        btn.classList.remove('selected');
+      });
+    });
+  </script>
+</body>
+</html>

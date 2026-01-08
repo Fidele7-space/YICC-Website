@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | JAF Global</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="index_styles.css">
+  <style>
+    .success-hero {
+      background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+      color: #fff;
+      padding: 150px 0;
+      text-align: center;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .success-icon {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section class="success-hero">
+    <div class="container">
+      <div class="success-icon">✅</div>
+      <h1>Thank You for Your Generosity!</h1>
+      <p class="hero-subtitle">
+        Your donation has been successfully processed. You're making a real difference 
+        in the lives of talented youth.
+      </p>
+      <div style="margin-top: 40px;">
+        <a href="index.html" class="cta-donate-btn">Return Home</a>
+      </div>
+      <p id="receiptMessage" style="margin-top: 30px; font-size: 1.1rem;"></p>
+    </div>
+  </section>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const download = urlParams.get('download');
+    const emailSent = urlParams.get('email');
+    
+    if (emailSent) {
+      document.getElementById('receiptMessage').textContent = '📧 Your receipt has been emailed to you.';
+    } else if (download) {
+      document.getElementById('receiptMessage').innerHTML = '📥 <a href="' + download + '" style="color: #c8e6c9; text-decoration: underline;">Click here to download your receipt</a>';
+    }
+  </script>
+</body>
+</html>

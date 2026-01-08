@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reports & Publications | JAF Global</title>
+  <link rel="icon" type="image/jpeg" href="../assets/logo.jpeg">
+  <link rel="stylesheet" href="index_styles.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="index.html" class="logo-container">
+        <img src="../assets/logo.jpeg" alt="JAF Global" class="logo-image">
+        <div class="logo-text">
+          <div class="logo-name">JAF GLOBAL</div>
+          <div class="logo-tagline">FUTURE FOCUS</div>
+        </div>
+      </a>
+      <nav>
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programs.html">PROGRAMS</a>
+        <a href="impact.html">IMPACT</a>
+        <a href="contact.html">CONTACT</a>
+        <div class="nav-buttons">
+              <a href="donate.html" class="btn-donate">DONATE</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- REPORTS HERO -->
+  <section class="reports-hero">
+    <div class="container">
+      <h1>Reports & <span class="highlight-light">Publications</span></h1>
+      <p class="hero-subtitle">
+        Explore our annual reports, impact studies, newsletters, and publications 
+        documenting our work and the lives we're transforming.
+      </p>
+    </div>
+  </section>
+
+  <!-- FILTER SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-btn active" onclick="filterReports('all')">All Publications</button>
+        <button class="filter-btn" onclick="filterReports('annual')">Annual Reports</button>
+        <button class="filter-btn" onclick="filterReports('newsletter')">Newsletters</button>
+        <button class="filter-btn" onclick="filterReports('impact')">Impact Studies</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTS GRID -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="reports-grid" id="reportsGrid">
+        
+        <!-- Report Card 1 -->
+        <div class="report-card" data-category="annual" data-report-id="report1" onclick="openReport('report1')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/report-2025-thumb.jpg" alt="2025 Annual Report">
+            <div class="report-badge">Annual Report</div>
+          </div>
+          <div class="report-content">
+            <h3>2025 Annual Report</h3>
+            <p class="report-date">📅 January 2026</p>
+            <p class="report-description">
+              A comprehensive overview of our achievements, impact metrics, and 
+              financial transparency for the year 2025.
+            </p>
+            <div class="report-stats">
+              <span>📄 32 pages</span>
+              <span>👁️ <span class="view-count">1.2K</span> views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Card 2 -->
+        <div class="report-card" data-category="newsletter" data-report-id="newsletter-dec2025" onclick="openReport('newsletter-dec2025')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/newsletter-dec-thumb.jpg" alt="December Newsletter">
+            <div class="report-badge newsletter">Newsletter</div>
+          </div>
+          <div class="report-content">
+            <h3>December 2025 Newsletter</h3>
+            <p class="report-date">📅 December 2025</p>
+            <p class="report-description">
+              Year-end highlights, student success stories, and upcoming initiatives 
+              for the new year.
+            </p>
+            <div class="report-stats">
+              <span>📄 8 pages</span>
+              <span>👁️ <span class="view-count">850</span> views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Card 3 -->
+        <div class="report-card" data-category="impact" data-report-id="impact-yicc-2025" onclick="openReport('impact-yicc-2025')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/impact-yicc-thumb.jpg" alt="YICC Impact Study">
+            <div class="report-badge impact">Impact Study</div>
+          </div>
+          <div class="report-content">
+            <h3>YICC Program Impact Study</h3>
+            <p class="report-date">📅 November 2025</p>
+            <p class="report-description">
+              Measuring the environmental and social impact of our Youth Initiative 
+              for Climate Change program.
+            </p>
+            <div class="report-stats">
+              <span>📄 24 pages</span>
+              <span>👁️ <span class="view-count">620</span> views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Card 4 -->
+        <div class="report-card" data-category="annual" data-report-id="report2024" onclick="openReport('report2024')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/report-2024-thumb.jpg" alt="2024 Annual Report">
+            <div class="report-badge">Annual Report</div>
+          </div>
+          <div class="report-content">
+            <h3>2024 Annual Report</h3>
+            <p class="report-date">📅 January 2025</p>
+            <p class="report-description">
+              Our journey through 2024: expanded programs, new partnerships, and 
+              unprecedented reach across communities.
+            </p>
+            <div class="report-stats">
+              <span>📄 28 pages</span>
+              <span>👁️ <span class="view-count">2.1K</span> views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Card 5 -->
+        <div class="report-card" data-category="newsletter" data-report-id="newsletter-sep2025" onclick="openReport('newsletter-sep2025')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/newsletter-sep-thumb.jpg" alt="September Newsletter">
+            <div class="report-badge newsletter">Newsletter</div>
+          </div>
+          <div class="report-content">
+            <h3>September 2025 Newsletter</h3>
+            <p class="report-date">📅 September 2025</p>
+            <p class="report-description">
+              Back to school highlights, new program launches, and donor appreciation.
+            </p>
+            <div class="report-stats">
+              <span>📄 6 pages</span>
+              <span>👁️ <span class="view-count">940</span> views</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Card 6 -->
+        <div class="report-card" data-category="impact" data-report-id="agriculture-impact" onclick="openReport('agriculture-impact')">
+          <div class="report-thumbnail">
+            <img src="../assets/reports/agriculture-impact-thumb.jpg" alt="Agriculture Impact">
+            <div class="report-badge impact">Impact Study</div>
+          </div>
+          <div class="report-content">
+            <h3>Agriculture Program Impact Assessment</h3>
+            <p class="report-date">📅 August 2025</p>
+            <p class="report-description">
+              Evaluating the economic and social impact of our sustainable agriculture 
+              training initiatives.
+            </p>
+            <div class="report-stats">
+              <span>📄 20 pages</span>
+              <span>👁️ <span class="view-count">580</span> views</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORT VIEWER MODAL -->
+  <div id="reportModal" class="report-modal">
+    <div class="report-modal-content">
+      <button class="modal-close" onclick="closeReport()">&times;</button>
+      <div class="modal-header">
+        <h2 id="modalTitle">Report Title</h2>
+        <div class="modal-actions">
+          <button class="action-btn" onclick="downloadReport()">
+            📥 Download PDF
+          </button>
+          <button class="action-btn" onclick="printReport()">
+            🖨️ Print
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe id="reportViewer" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>ABOUT</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="about.html#team">Our Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>PROGRAMS</h3>
+          <ul>
+            <li><a href="programs.html">YICC</a></li>
+            <li><a href="programs.html">Agriculture</a></li>
+            <li><a href="programs.html">Trade</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>IMPACT</h3>
+          <ul>
+            <li><a href="impact.html">Our Impact</a></li>
+            <li><a href="impact.html">Success Stories</a></li>
+            <li><a href="reports.html">Reports</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>MONTHLY NEWSLETTER</h3>
+          <div class="footer-newsletter">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <input type="email" placeholder="Your Email">
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <p>© 2026 JAF Global. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+        </div>
+        <div class="social-icons">
+          <a href="#" title="Instagram">📷</a>
+          <a href="#" title="YouTube">▶️</a>
+          <a href="#" title="Twitter">𝕏</a>
+          <a href="#" title="LinkedIn">💼</a>
+          <a href="#" title="Facebook">f</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index_script.js"></script>
+  <script>
+  // Report data
+  const reports = {
+    'report1': {
+      title: '2025 Annual Report',
+      url: 'reports/JAF-Global-Annual-Report-2025.pdf',
+      views: 111
+    },
+    'newsletter-dec2025': {
+      title: 'December 2025 Newsletter',
+      url: 'reports/Newsletter-December-2025.pdf',
+      views: 0
+    },
+    'impact-yicc-2025': {
+      title: 'YICC Program Impact Study',
+      url: 'reports/YICC-Impact-Study-2025.pdf',
+      views: 0
+    },
+    'report2024': {
+      title: '2024 Annual Report',
+      url: 'reports/JAF-Global-Annual-Report-2024.pdf',
+      views: 0
+    },
+    'newsletter-sep2025': {
+      title: 'September 2025 Newsletter',
+      url: 'reports/Newsletter-September-2025.pdf',
+      views: 0
+    },
+    'agriculture-impact': {
+      title: 'Agriculture Program Impact Assessment',
+      url: 'reports/Agriculture-Impact-Assessment-2025.pdf',
+      views: 0
+    }
+  };
+
+  // Load view counts from server
+  async function loadViewCounts() {
+    try {
+      const response = await fetch('save-view.php');
+      const data = await response.json();
+      
+      if (data.success) {
+        // Update local reports object with server data
+        for (let reportId in data.views) {
+          if (reports[reportId]) {
+            reports[reportId].views = data.views[reportId];
+          }
+        }
+        updateAllViewCounts();
+      }
+    } catch (error) {
+      console.error('Error loading view counts:', error);
+      // Fallback to default values if server unavailable
+      updateAllViewCounts();
+    }
+  }
+
+  // Update all view count displays
+  function updateAllViewCounts() {
+    document.querySelectorAll('.report-card').forEach(card => {
+      const reportId = card.getAttribute('data-report-id');
+      if (reportId && reports[reportId]) {
+        const viewElement = card.querySelector('.view-count');
+        if (viewElement) {
+          viewElement.textContent = formatViews(reports[reportId].views);
+        }
+      }
+    });
+  }
+
+  // Format view count (e.g., 1200 -> 1.2K)
+  function formatViews(views) {
+    if (views >= 1000) {
+      return (views / 1000).toFixed(1) + 'K';
+    }
+    return views.toString();
+  }
+
+  // Increment view count on server
+  async function incrementViews(reportId) {
+    try {
+      const response = await fetch('save-view.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ reportId: reportId })
+      });
+      
+      const data = await response.json();
+      
+      if (data.success) {
+        // Update local view count
+        if (reports[reportId]) {
+          reports[reportId].views = data.views;
+          updateAllViewCounts();
+        }
+      }
+    } catch (error) {
+      console.error('Error incrementing view count:', error);
+    }
+  }
+
+  // Filter reports
+  function filterReports(category) {
+    const cards = document.querySelectorAll('.report-card');
+    const buttons = document.querySelectorAll('.filter-btn');
+    
+    // Update active button
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    // Filter cards
+    cards.forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+        setTimeout(() => card.style.opacity = '1', 10);
+      } else {
+        card.style.opacity = '0';
+        setTimeout(() => card.style.display = 'none', 300);
+      }
+    });
+  }
+
+  // Open report in modal
+  function openReport(reportId) {
+    const report = reports[reportId];
+    if (!report) {
+      alert('Report not available');
+      return;
+    }
+    
+    // Increment view count on server
+    incrementViews(reportId);
+    
+    document.getElementById('modalTitle').textContent = report.title;
+    document.getElementById('reportViewer').src = report.url;
+    document.getElementById('reportModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Store current report for download
+    window.currentReport = report;
+  }
+
+  // Close report modal
+  function closeReport() {
+    document.getElementById('reportModal').style.display = 'none';
+    document.getElementById('reportViewer').src = '';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Download report
+  function downloadReport() {
+    if (window.currentReport) {
+      const link = document.createElement('a');
+      link.href = window.currentReport.url;
+      link.download = window.currentReport.title + '.pdf';
+      link.click();
+    }
+  }
+
+  // Print report
+  function printReport() {
+    const iframe = document.getElementById('reportViewer');
+    iframe.contentWindow.print();
+  }
+
+  // Refresh view counts periodically (every 30 seconds)
+  setInterval(loadViewCounts, 30000);
+
+  // Close modal on outside click
+  document.getElementById('reportModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      closeReport();
+    }
+  });
+
+  // Close modal on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeReport();
+    }
+  });
+
+  // Load view counts on page load
+  window.addEventListener('DOMContentLoaded', loadViewCounts);
+  </script>
+</body>
+</html>
