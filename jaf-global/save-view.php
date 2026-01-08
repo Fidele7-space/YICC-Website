@@ -6,12 +6,12 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 $viewsFile = 'data/report-views.json';
 
-// Create data directory if it doesn't exist
+// this is for create data directory if it doesn't exist
 if (!file_exists('data')) {
     mkdir('data', 0777, true);
 }
 
-// Initialize default view counts if file doesn't exist
+// Initialize default view counts if we forget to update the json file
 if (!file_exists($viewsFile)) {
     $defaultViews = [
         'report1' => 1200,

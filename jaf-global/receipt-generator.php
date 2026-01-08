@@ -86,7 +86,7 @@ function generateReceipt($donation, $capture) {
     
     return $filename;
 }
-
+    // Send receipt email  , Ntituzibagirwe ko tugomba guhindura email server settings muri php.ini kugirango email zohereze neza
 function sendReceiptEmail($email, $name, $receiptPath, $amount) {
     $to = $email;
     $subject = 'Thank You for Your Donation to JAF Global';
@@ -103,7 +103,8 @@ function sendReceiptEmail($email, $name, $receiptPath, $amount) {
         <p style='font-size: 12px; color: #666;'>
             JAF Global | Future Focus<br>
             Kigali, Rwanda<br>
-            info@jafglobal.org
+            info@jafglobal.org     
+            www.jafglobal.org          
         </p>
     </body>
     </html>

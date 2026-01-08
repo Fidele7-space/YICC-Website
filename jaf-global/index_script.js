@@ -25,7 +25,7 @@ if (form) {
   });
 }
 
-// Scroll animations
+// Scroll animations don't laugh at me, ibi nibyo nshoore gukora ngo ibintu bibe byiza
 const animatedItems = document.querySelectorAll(".fade-up, .slide-in");
 
 const observer = new IntersectionObserver(entries => {

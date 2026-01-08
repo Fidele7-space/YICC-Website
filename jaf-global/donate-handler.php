@@ -7,13 +7,13 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // PayPal API Configuration
 define('PAYPAL_MODE', 'sandbox'); // Change to 'live' for production
-define('PAYPAL_CLIENT_ID', 'YOUR_PAYPAL_CLIENT_ID_HERE');
+define('PAYPAL_CLIENT_ID', 'YOUR_PAYPAL_CLIENT_ID_HERE'); //ibi tuzabibona from paypal developer account when we create an account
 define('PAYPAL_SECRET', 'YOUR_PAYPAL_SECRET_HERE');
 
 // PayPal API URLs
 $apiUrl = PAYPAL_MODE === 'sandbox' 
-    ? 'https://api-m.sandbox.paypal.com' 
-    : 'https://api-m.paypal.com';
+    ? 'https://api-m.sandbox.paypal.com' //this for the time when we will be testing
+    : 'https://api-m.paypal.com'; //this for the time when we will be live and hosted
 
 // Get access token
 function getPayPalAccessToken($apiUrl) {
