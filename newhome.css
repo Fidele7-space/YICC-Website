@@ -232,8 +232,6 @@
         font-size: 25px;
     }
 
-
-
     #programs{
         display:flex;
         justify-items:center;
@@ -277,7 +275,7 @@
     }
     #page2{
         display:flex;
-        justify-content:center;
+        justify-content: flex-start;
         flex-direction:column;
         width:100%;
         padding:80px 0;
@@ -285,6 +283,7 @@
     .elements{
         display:flex;
         justify-content:space-between;
+        top: 0;
     }
     .elements img{
         height: 60px;
@@ -310,7 +309,6 @@
         justify-content:center;
         align-items:center;
         flex-direction:column;
-        margin-top:30px;
     }
     .programs p{
         margin-top: -20px;
@@ -321,7 +319,6 @@
     .grid-cardsection{
         display:grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
-        justify-content: center;
         align-items:stretch;
         gap:20px;
         width:100%;
