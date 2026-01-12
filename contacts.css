@@ -176,6 +176,21 @@
     height: 100vh;
   }
 
+  .get-involvedBtn{
+    height: 30px;
+    width: 150px;
+    background: rgb(34, 163, 34);
+    border: 1px black;
+    border-radius: 3px;
+    font-weight: bold;
+
+  }
+
+    .get-involvedBtn:hover{
+      background:  rgb(41, 212, 41);
+      cursor: pointer;
+      color: white;
+    }
   .contact-us-title{
     display: flex;
     flex-direction: column;
