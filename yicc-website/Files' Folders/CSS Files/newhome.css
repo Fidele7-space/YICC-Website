@@ -215,7 +215,7 @@
         gap: 30px;
         height: 100vh;
         width: 100%;
-        background-image: url(plant.JPG);
+        background-image: url(../Activity\ pictures/plant.JPG);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -277,8 +277,10 @@
         display:flex;
         justify-content: flex-start;
         flex-direction:column;
+        top: 0;
         width:100%;
-        padding:80px 0;
+        padding:40px 40px;
+        background: darkgreen;
     }
     .elements{
         display:flex;
@@ -300,14 +302,19 @@
     }
     .Elements-content h1{
         margin-top:-5px;
+        color: white;
+        font-weight: bold;
     }
     .Elements-content span{
         margin-top:-25px;
+        color: rgb(186, 209, 186);
+        font-weight: 800;
     }
+    
     .programs{
         display:flex;
         justify-content:center;
-        align-items:center;
+        align-items: center;
         flex-direction:column;
     }
     .programs p{
@@ -365,7 +372,6 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        
     }
     .card:hover{
         cursor:pointer;
@@ -373,53 +379,40 @@
         box-shadow: var(--shadow);
         background:linear-gradient(90deg, lightblue, white);
     }
-    .card span{
-        color: var(--greensoft);
-    }
-    .card button{
-        background: transparent;
-        color:var(--text);
-    }
-    .card button:hover{
-        box-shadow:var(--shadow);
-        background: transparent;
-        color:black;
-        cursor:pointer;
-    }
-
+ 
     .card:nth-child(2){
-        background-image: url(IMG-20241209-WA0010.jpg);
+        background-image: url(../Activity\ pictures/IMG-20241209-WA0010.jpg);
     }
     .card:hover:nth-child(2){
         cursor:pointer;
         transform: scale(1.02);
         box-shadow: var(--shadow);
-        background: url(IMG-20241209-WA0010.jpg);
+        background: url(../Activity\ pictures/IMG-20241209-WA0010.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     .card:nth-child(4){
-        background-image: url(IMG-20241209-WA0010.jpg);
+        background-image: url(../Activity\ pictures/IMG-20241029-WA0019.jpg);
     }
     .card:hover:nth-child(4){
         cursor:pointer;
         transform: scale(1.02);
         box-shadow: var(--shadow);
-        background: url(IMG-20241209-WA0010.jpg);
-         background-position: center;
+        background: url(../Activity\ pictures/IMG-20241029-WA0019.jpg);
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
     .card:nth-child(6){
-        background-image: url(IMG-20241209-WA0010.jpg);
+        background-image: url(../Activity\ pictures/IMG-20241029-WA0028.jpg);
     }
     .card:hover:nth-child(6){
         cursor:pointer;
         transform: scale(1.02);
         box-shadow: var(--shadow);
-        background: url(IMG-20241209-WA0010.jpg);
+        background: url(../Activity\ pictures/IMG-20241029-WA0028.jpg);
          background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -429,10 +422,12 @@
         display: inline-block; 
         margin-left: 5px;
         transition: transform 0.3s ease; 
+        color: black;
         }
-     
-    .card button:hover .arrow{
-        transform: translatex(5px);
+    
+    .arrow:hover{
+        transform: translatex(5px) scale(1.2);
+        color: darkgreen;
     }
 
     .card img{
@@ -447,24 +442,25 @@
         justify-content:center;
         align-items:center;
         flex-direction:column;
+        height: 300px;
+        background: darkgreen;
     }
-    #mission .m-parag{
+    #mission h1{
+        color: white;
+    }
+    .m-parag{
         width:100%;
         max-width:700px;
         height:100px;
-        background:rgb(219, 238, 219) 50%;
-        background: linear-gradient(rgb(194, 233, 207), white) padding-box, 
-                    linear-gradient(to right, white, rgb(116, 199, 116), white) border-box;
-        border: 1px solid transparent;
-        box-shadow:-10px 5px 5px rgba(106, 123, 115, 0.5);
-        border-radius:var(--radiusMd);
-        backdrop-filter: blur(20px);
         display:flex;
         justify-content:center;
         align-items:center;
         text-align:center;
         padding:20px 20px;
-        margin-bottom: 100px;
+        color: rgb(220, 216, 216);
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 1.2;
     }
     #mission .card{
         height: auto;
@@ -473,24 +469,18 @@
         width:100%;
         max-width:55vw;
         height: auto;
-        background: linear-gradient(90deg, lightblue, white);
         display:flex;
         justify-content:flex-start;
         align-items:flex-start;
         align-content:flex-start;
         flex: 1;
         padding: 40px;
-        box-shadow:10px 5px 5px rgba(51, 51, 51, 0.5);
-        border-top-right-radius: var(--radiusLg);
     }
     .whyjaf h1{
         color: black;
     }
     .whyjaf span{
-        background: linear-gradient(90deg, #045235, #26c826);
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
+        color: white;
     }
     .whyjaf{
         display:flex;
@@ -499,9 +489,10 @@
     .aside{
         display: flex;
         width: 100%;
-        min-height: auto;
+        height: 100vh;
         gap: 3rem;
-        padding: 60px 0;
+        
+        background: linear-gradient(90deg, darkgreen, white);
 
     }
     #aside{
@@ -509,7 +500,7 @@
         flex-direction:column;
         width:100%;
         max-width:45vw;
-        height: auto;
+        height: 100vh;
         min-height: unset;
         padding: 20px;
         flex: 1;
@@ -518,7 +509,7 @@
         display:block;
         object-fit:cover;
         width:100%;
-        height:auto;
+        height:80vh;
         border-radius: var(--radiusLg);
         border-bottom-left-radius:0px;
     }

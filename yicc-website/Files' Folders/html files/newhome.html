@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="yicc logo.png">
-    <link rel="stylesheet" href="yicc-website\Files' Folders\CSS Files\newhome.css">
+    <link rel="icon" href="../icons and logos/yicc logo.png">
+    <link rel="stylesheet" href="../CSS Files/newhome.css">
     
     <title>YICC</title>
 </head>
@@ -16,7 +16,7 @@
       <div class="brand">
         <a href="newhome.html">
         <div class="brand-badge">
-          <img src="yicc logo.png" alt="YICC Logo"/>
+          <img src="../icons and logos/yicc logo.png" alt="YICC Logo"/>
         </div>
         <div>
           <div class="brand-name">YICC</div>
@@ -25,7 +25,7 @@
         </a>
       </div>
 
-      <nav class="nav" aria-label="Primary navigation">
+      <nav class="nav" aria-label="Primary navigation" id="navbar">
         <a class="active" href="newhome.html">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                stroke-linecap="round" stroke-linejoin="round">
@@ -88,7 +88,7 @@
           Contact
         </a>
       </nav>
-      <button class="burger" type="button" aria-label="Open menu">
+      <button class="burger" type="button" aria-label="Open menu" onclick="document.getElementById('navbar').style.display='block' ">
         <span></span><span></span><span></span>
       </button>
     </header>
@@ -120,83 +120,86 @@
         </div>
       </div> 
     </div>
-  <div class="shell">
     <!--Page 2-->
-    <div id="page2">
+    <section id="page2">
       <!--Page 2 elements-->
       <div class="elements">
         <div class="Elements-content">
-            <img src="assets\logo.jpeg" alt="">
+            <img src="../icons and logos/yicc logo.png" alt="">
             <h1>1350+</h1>
             <span>Students Reached</span>
         </div>
         <div class="Elements-content">
-            <img src="assets\logo.jpeg" alt="">
+            <img src="../icons and logos/yicc logo.png" alt="">
             <h1>10+</h1>
             <span>Trees Planted</span>
         </div>
         <div class="Elements-content">
-            <img src="assets\logo.jpeg" alt="">
+            <img src="../icons and logos/yicc logo.png" alt="">
             <h1>65+</h1>
             <span>Schools Targeted in 2026</span>
         </div>
         <div class="Elements-content">
-            <img src="assets\logo.jpeg" alt="">
+            <img src="../icons and logos/yicc logo.png" alt="">
             <h1>3</h1>
             <span>Core Programs</span>
         </div>
       </div>
-      <div class="programs">
-        <h1> Our Programs</h1>
-        <p>Three comprehensive initiatives workging together to
-          empower Rwandan youth to become climate leaders through education, innovation, and action.</p>
-      </div>
-    </div>
-
-    <!--Page 3-->
-    <section class="grid-cardsection">
-      <div class="card" id="setprogram">
-        <img src="assets\logo.jpeg" alt="">
-        <h2>SET Program</h2>
-        <span><strong>Sensitization, Engagement & Transformation</strong></span>
-        <p>Raising awareness and transforming youth into active environment guardians
-          through education and youth-driven activism.
-        </p>
-        <a href="Programs.html#setprogram">
-          <button>Learn More<span class="arrow"> →</span></button>
-        </a>
-      </div>
-      <div class="card" id="carprogram">
-        <img src="assets\logo.jpeg" alt="">
-        <h2>CAR Program</h2>
-        <span><strong>Climate Adaptation in Rwanda</strong></span>
-        <p>Empowering youth to develop innovative adaptation solutions for
-          climate resilience in vulnerable communities.
-        </p>
-        <a href="Programs.html#carprogram">
-          <button>Learn More<span class="arrow"> →</span></button>
-        </a>
-      </div>
-      <div class="card" id="cmprogram">
-        <img src="assets\logo.jpeg" alt="">
-        <h2>CMP Program</h2>
-        <span><strong>Climate Mitigation Program</strong></span>
-        <p>Reducing greenhouse gas emmissions through tree planting
-          renewable energy promotion and sustainable practices.
-        </p>
-        <a href="Programs.html#cmprogram">
-          <button>Learn More<span class="arrow"> →</span></button>
-        </a>
     </section>
+  <div class="shell">
+      <div class="programs">
+          <h1> Our Programs</h1>
+          <p>Three comprehensive initiatives workging together to
+            empower Rwandan youth to become climate leaders through education, innovation, and action.</p>
+      </div>
+      <!--Page 3-->
+      <section class="grid-cardsection">
+        <div class="card" id="setprogram">
+          <img src="../icons and logos/yicc logo.png" alt="">
+          <h2>SET Program</h2>
+          <span><strong>Sensitization, Engagement & Transformation</strong></span>
+          <p>Raising awareness and transforming youth into active environment guardians
+            through education and youth-driven activism.
+          </p>
+          <a href="Programs.html#setprogram">
+            <p class="arrow">Learn More →</p>
+          </a>
+        </div>
+        <div class="card" id="carprogram">
+          <img src="../icons and logos/yicc logo.png" alt="">
+          <h2>CAR Program</h2>
+          <span><strong>Climate Adaptation in Rwanda</strong></span>
+          <p>Empowering youth to develop innovative adaptation solutions for
+            climate resilience in vulnerable communities.
+          </p>
+          <a href="Programs.html#carprogram">
+            <p class="arrow">Learn More →</p>
+          </a>
+        </div>
+        <div class="card" id="cmprogram">
+          <img src="../icons and logos/yicc logo.png" alt="">
+          <h2>CMP Program</h2>
+          <span><strong>Climate Mitigation Program</strong></span>
+          <p>Reducing greenhouse gas emmissions through tree planting
+            renewable energy promotion and sustainable practices.
+          </p>
+          <a href="Programs.html#cmprogram">
+            <p class="arrow">Learn More →</p>
+          </a>
+      </section>
+  </div>
     <section id="mission">
       <h1>Our Mission</h1>
       <p class="m-parag">To empower Rwandan high school students and youth to become environmental leaders of tomorrow, ensuring that climate 
         solutions extend from local communities to the global stage.
       </p>
+    </section>
+  <div class="shell">
+    <section>
       <div class="grid-cards">
         <div class="card">
           
-          <img src="assets\logo.jpeg" alt="">
+          <img src="../icons and logos/yicc logo.png" alt="">
           <span><strong>Youth Empowerment</strong></span>
           <p>Equipping young leaders with knowledge and tools to drive climate action, through
             hands-on workshops and exposure to cutting-edge technology to develop home-grown environmental 
@@ -207,7 +210,7 @@
         <div class="card"><!--image--></div>
 
         <div class="card">
-          <img src="assets\logo.jpeg" alt="">
+          <img src="../icons and logos/yicc logo.png" alt="">
           <span><strong>Global Impact</strong></span>
           <p>Creating environmental products that cross borders, resonate from Rwanda to global arena.
           </p>
@@ -216,7 +219,7 @@
         <div class="card"><!--image--></div>
 
         <div class="card">
-          <img src="assets\logo.jpeg" alt="">
+          <img src="../icons and logos/yicc logo.png" alt="">
           <span><strong>Sustainable Future</strong></span>
           <p>Building resilience by utilizing and integrating blossoming technologies into environmental 
             stewardship
@@ -227,9 +230,9 @@
 
       </div>  
     </section>
-    <div class="aside">
+  </div>
+  <div class="aside">
       <section id="page4">
-      
         <div class="whyjaf">
           <h1> Why Climate Action <br> <span>Matters Now</span></h1>
           <p>Climate change is one of the most pressing issues affecting Rwanda
@@ -245,13 +248,14 @@
         </div>
       </section>
       <aside id="aside">
-          <img src="assets\pic.jpg" alt="">
+          <img src="../Activity pictures/pic.jpg" alt="">
           <div class="aside-box">
             <span>1350+</span>
             <span>Students Reached Since 2025</span>
           </div>
       </aside>
-    </div>
+  </div>
+  <div class="shell">
       <div class="join">
         <a class="join-movement" href="newhome.html#username">
           Join The Movement
@@ -282,7 +286,7 @@
                 <div class="brand">
                   <a href="newhome.html">
                     <div class="brand-badge">
-                      <img src="yicc logo.png" alt="YICC Logo"/>
+                      <img src="../icons and logos/yicc logo.png" alt="YICC Logo"/>
                     </div>
                     <div>
                       <div class="brand-name">YICC</div>
@@ -320,7 +324,7 @@
                 </div>
             </div>
             <div class="contact-us">
-              <form action="#" method="GET">
+              <form id = "contactForm" action="#" method="GET">
                 <div class="form-item">
                   <label for="username">Full Names: </label>
                   <input type="textbox" id="username" placeholder="Enter your full names" minlength="6" required>
@@ -333,13 +337,13 @@
                   <label for="message">Message: </label>
                   <textarea id="message"></textarea>
                 </div>
-                <input type="submit" id="submit-button">
+                <input type="submit" id="submitBtn">
               </form>
             </div>
           </div>
           <p class="footer">&copy; 2025 Youth Initiative in Climate Change. All Rights Reserved.</p>
         </footer>
       </div> 
-    <script src="home.js"></script>
+    <script src="../JS/home.js"></script> 
 </body>
 </html>
