@@ -227,6 +227,15 @@ nav a:hover {
   font-size: 2rem;
 }
 
+.card-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
+}
+
 .card h3 {
   color: #7cb342;
   margin-bottom: 15px;
