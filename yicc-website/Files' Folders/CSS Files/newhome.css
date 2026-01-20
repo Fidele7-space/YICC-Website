@@ -344,22 +344,25 @@
 
     .grid-cardsection .card:hover:nth-child(2){
         cursor:pointer;
-        transform: scale(1.02);
         box-shadow: var(--shadow);
-        background:linear-gradient(90deg, lightblue, white);
+        background:linear-gradient(90deg, rgb(184, 230, 173), white);
     }
 
-    .grid-cards{
+    .grid-cardsection-2{
         display:grid;
-        grid-template-columns: repeat(2, minmax(300px, 1fr));
-        grid-template-rows: repeat(3, minmax(300px, 1fr));
-        justify-content: center;
+        grid-template-columns: repeat(3, minmax(300px, 1fr));
         align-items:stretch;
         gap:20px;
         width:100%;
+        background: var(--card);
     }
-
-    .card{
+    .card img{
+      background: lightgreen;
+    }
+    .card h3{
+        color: darkgreen;
+    }
+    .grid-cardsection-2 .card:nth-child(2){
         background:var(--card);
         border-radius:var(--radiusMd);
         display:flex;
@@ -369,23 +372,76 @@
         padding: 5px 20px;
         box-shadow: var(--shadow);
         height: auto;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+    }
+    .grid-cardsection-2 .card:hover:nth-child(2){
+        cursor:pointer;
+        top: -10px;
+        box-shadow: var(--shadow);
+        background: var(--surface)
+    }
+    .grid-cardsection-2 .card:nth-child(1){
+        margin-left: 30px;
+    }
+    .grid-cardsection-2 .card:nth-child(3){
+        margin-right: 30px;
+    }
+    .grid-cardsection-2 .card p{
+        display: flex;
+        gap: 10px;
+    }
+    .grid-cardsection-2 .card p img{
+        height: 20px;
+        width: 20px;
+        background: none;
+    }
+
+    .grid-cardsection-2 .card:hover{
+        cursor:pointer;
+        top: -10px;
+        box-shadow: var(--shadow);
+        border: green;
+        background: var(--surface);
+    }
+
+    .grid-cards{
+        display:grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        grid-template-rows: repeat(3, minmax(300px, 1fr));
+        justify-content: center;
+        align-items: stretch;
+        gap:20px;
+        width:100%;
+    }
+
+    .card{
+        border-radius:var(--radiusMd);
+        display:flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-direction:column;
+        padding: 5px 20px;
+        box-shadow: var(--shadow);
+        height: auto;
+        position: relative;
+        top: 0;
+        transition: top 0.3s ease, box-shadow 0.3s ease;
+
     }
     .card:hover{
         cursor:pointer;
-        transform: scale(1.02);
+        top: -6px;
         box-shadow: var(--shadow);
-        background:linear-gradient(90deg, lightblue, white);
+        background:linear-gradient(90deg, rgb(184, 230, 173), white);
     }
  
     .card:nth-child(2){
         background-image: url(../Activity\ pictures/IMG-20241209-WA0010.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .card:hover:nth-child(2){
         cursor:pointer;
-        transform: scale(1.02);
         box-shadow: var(--shadow);
         background: url(../Activity\ pictures/IMG-20241209-WA0010.jpg);
         background-position: center;
@@ -395,10 +451,12 @@
 
     .card:nth-child(4){
         background-image: url(../Activity\ pictures/IMG-20241029-WA0019.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .card:hover:nth-child(4){
         cursor:pointer;
-        transform: scale(1.02);
         box-shadow: var(--shadow);
         background: url(../Activity\ pictures/IMG-20241029-WA0019.jpg);
         background-position: center;
@@ -407,13 +465,16 @@
     }
     .card:nth-child(6){
         background-image: url(../Activity\ pictures/IMG-20241029-WA0028.jpg);
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .card:hover:nth-child(6){
         cursor:pointer;
-        transform: scale(1.02);
         box-shadow: var(--shadow);
         background: url(../Activity\ pictures/IMG-20241029-WA0028.jpg);
-         background-position: center;
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
     }
@@ -432,9 +493,9 @@
 
     .card img{
         height: 60px;
-        width:60px;
-        display:flex;
-        border-radius:20px;
+        width: 60px;
+        display: block;
+        border-radius: 20px;
     }
 
     #mission{
@@ -620,12 +681,16 @@
     display:flex;
     flex-direction:row;
     width:100%;
+    height: 60vh;
+    background: hsl(132, 58%, 36%);
+    padding-top: 40px;
   }
 
   .parent-footer{
       width:100%;
-      height: auto;
-      min-height: unset;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
   }
 
   .black-horizontal-box{
@@ -649,7 +714,6 @@
       align-content:center;
       flex-direction:row;
       padding: 0 40px;
-
   }
 
   .left-content{
@@ -673,8 +737,8 @@
   }
 
   .paragraphs p:nth-child(2){
-    font-weight: 800;
-    color:#045638;
+    font-weight: 600;
+    color:white;
   }
   .right-content{
       width:100%;
@@ -695,7 +759,7 @@
   }
 
   .links-title{
-      color: darkgreen;
+      color: white;
       font-weight:bold;
       justify-content: left;
   }
@@ -706,7 +770,7 @@
       align-items: left;
       align-content: left;
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
   }
 
   .unordered-links a{
@@ -726,15 +790,14 @@
 
  .contacts-title{
       font:sans-serif;
-      color: darkgreen;
+      color:white;
       font-weight:bold;
   }
 
   .contact-info{
       display:flex;
-      flex-direction:column;
-      text-decoration:none;
-      gap: 5px;
+      flex-direction: column;
+      gap: 10px;
   }
 
   .contact-info a{
@@ -754,7 +817,6 @@
       max-width:500px;
       height: auto;
       gap: 10px;
-      
   }
 
   .form-item{
@@ -763,37 +825,47 @@
   }
 
   #email{
-    width: 216px;
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+  }
+
+  #username{
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
   }
 
   #message{
-    width: 190px;
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
   }
 
-  #submit-button{
+  #submitBtn{
     background:#46b846;
     font-weight: bold;
-    width: 100px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+
   }
 
-   #submit-button:hover{
+   #submitBtn:hover{
     background:#85d285;
     color: white;
     cursor: pointer;
     font-weight: bold;
-  }
-
-
-  form input{
-      height:30px;
-      background: white;
-      border: none;
-      border-radius: 10px;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      padding-left: 10px;
-    
   }
 
   .footer{
@@ -801,9 +873,10 @@
       justify-content: center;
       align-items: center;
       height: 50px;
-      background: linear-gradient(white, rgb(201, 201, 201)) padding-box, linear-gradient(to right, white, darkgreen, white) border-box;
-      border-top: 1px solid transparent;
+      border-top: 1px solid white;
       width: 100%;
+      margin-top: auto;
+      padding-top: 20px;
   }
 
 #page2,
@@ -852,6 +925,9 @@
     #aside img{
         height: auto;
     }
+    .contacts-page-container{
+        height: 100vh;
+    }
 }
 
 @media(max-width: 768px){
@@ -896,8 +972,11 @@
     .contact-us{
         padding: 20px;
     }
-}
 
+    .contacts-page-container{
+        height: 100vh;
+    }
+}
 @media(max-width: 480px){
     .Elements-content{
         width: 100%;
@@ -912,5 +991,8 @@
 .card{
         height: 300px;
         max-width: 100%;
+    }
+.contacts-page-container{
+        height: 100vh;
     }
 }
