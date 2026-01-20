@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../icons and logos/yicc logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-    <link rel="stylesheet" href="../CSS Files/programs.css">
+    <link rel="stylesheet" href="../CSS Files/newhome.css">
     <title>YICC</title>
 </head>
 <body>
@@ -377,10 +377,10 @@
     </div>
   </div>
     <!--Footer - Last Page-->
-      <div class="contacts-page-container">  
+      <div class="black-horizontal-box"></div>
+  <div class="white-horizontal-box"></div>
+  <div class="contacts-page-container">  
         <footer class="parent-footer">
-          <div class="black-horizontal-box"></div>
-          <div class="white-horizontal-box"></div>
           <div class="horizontal-align">
               <div class="left-content">
                 <div class="brand">
@@ -403,7 +403,7 @@
               <div class="right-content">
                 <div class="quick-links">
                   <div class="links-title">
-                    <span>Quick Links</span>
+                    <span>QUICK LINKS</span>
                   </div>
                   <div class="unordered-links">
                       <a href="newhome.html">Home</a>
@@ -414,7 +414,7 @@
                 </div>                    
                 <div class="contacts">
                   <div class="contacts-title">
-                    <span>Contacts</span>
+                    <span> CONTACTS</span>
                   </div>
                   <div class="contact-info">
                     <a href="inf@jaf.org">info@jaf.org</a>
@@ -424,26 +424,21 @@
                 </div>
             </div>
             <div class="contact-us">
-              <form action="#" method="GET">
+              <form id = "contactForm" action="#" method="GET">
                 <div class="form-item">
-                  <label for="username">Full Names: </label>
-                  <input type="textbox" id="username" placeholder="Enter your full names" minlength="6" required>
+                  <input type="textbox" id="username" placeholder="Your Names" minlength="6" required>
+                  <input type="email" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-item">
-                  <label for="email">Email: </label>
-                  <input type="email" id="email" placeholder="ie. example@gmail.com" required>
+                  <textarea id="message" placeholder="Your Message"></textarea>
                 </div>
-                <div class="form-item">
-                  <label for="message">Message: </label>
-                  <textarea id="message"></textarea>
-                </div>
-                <input type="submit" id="submit-button">
+                <input type="submit" id="submitBtn">
               </form>
             </div>
           </div>
           <p class="footer">&copy; 2025 Youth Initiative in Climate Change. All Rights Reserved.</p>
         </footer>
-      </div>
+      </div> 
     <script src="../JS/home.js"></script> 
 </body>
 </html>

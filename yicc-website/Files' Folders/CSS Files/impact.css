@@ -393,16 +393,26 @@
     box-shadow: var(--shadow);
     
   }
-  .contacts-page-container{
+ .white-horizontal-box{
+    display:flex;
+    height:50px;
+    width:100%;
+    background:linear-gradient(90deg, rgb(248, 251, 248), rgb(188, 178, 169))
+}
+.contacts-page-container{
     display:flex;
     flex-direction:row;
     width:100%;
+    height: 60vh;
+    background: hsl(132, 58%, 36%);
+    padding-top: 40px;
   }
 
   .parent-footer{
       width:100%;
-      height: auto;
-      min-height: unset;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
   }
 
   .black-horizontal-box{
@@ -426,7 +436,6 @@
       align-content:center;
       flex-direction:row;
       padding: 0 40px;
-
   }
 
   .left-content{
@@ -450,8 +459,8 @@
   }
 
   .paragraphs p:nth-child(2){
-    font-weight: 800;
-    color:#045638;
+    font-weight: 600;
+    color:white;
   }
   .right-content{
       width:100%;
@@ -472,7 +481,7 @@
   }
 
   .links-title{
-      color: darkgreen;
+      color: white;
       font-weight:bold;
       justify-content: left;
   }
@@ -483,7 +492,7 @@
       align-items: left;
       align-content: left;
       flex-direction: column;
-      gap: 5px;
+      gap: 10px;
   }
 
   .unordered-links a{
@@ -503,15 +512,14 @@
 
  .contacts-title{
       font:sans-serif;
-      color: darkgreen;
+      color:white;
       font-weight:bold;
   }
 
   .contact-info{
       display:flex;
-      flex-direction:column;
-      text-decoration:none;
-      gap: 5px;
+      flex-direction: column;
+      gap: 10px;
   }
 
   .contact-info a{
@@ -531,7 +539,6 @@
       max-width:500px;
       height: auto;
       gap: 10px;
-      
   }
 
   .form-item{
@@ -540,37 +547,47 @@
   }
 
   #email{
-    width: 216px;
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
+  }
+
+  #username{
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
   }
 
   #message{
-    width: 190px;
+      width: 150px;
+      height:50px;
+      background: white;
+      border: none;
+      border-radius: 5px;
+      text-align: center;
   }
 
-  #submit-button{
+  #submitBtn{
     background:#46b846;
     font-weight: bold;
-    width: 100px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+
   }
 
-   #submit-button:hover{
+   #submitBtn:hover{
     background:#85d285;
     color: white;
     cursor: pointer;
     font-weight: bold;
-  }
-
-
-  form input{
-      height:30px;
-      background: white;
-      border: none;
-      border-radius: 10px;
-      justify-content: center;
-      align-content: center;
-      align-items: center;
-      padding-left: 10px;
-    
   }
 
   .footer{
@@ -578,7 +595,8 @@
       justify-content: center;
       align-items: center;
       height: 50px;
-      background: linear-gradient(white, rgb(201, 201, 201)) padding-box, linear-gradient(to right, white, darkgreen, white) border-box;
-      border-top: 1px solid transparent;
+      border-top: 1px solid white;
       width: 100%;
+      margin-top: auto;
+      padding-top: 20px;
   }
