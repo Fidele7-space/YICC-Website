@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../icons and logos/yicc logo.png">
-    <link rel="stylesheet" href="../CSS Files/contacts.css">
-    <title>YICC</title>
+    <link rel="stylesheet" href="../CSS Files/newhome.css">
+    <title>YICC - contact us</title>
 </head>
 <body>
-  
   <div class="shell">
-    <section class="shell-section">
       <!-- TOP BAR -->
       <header class="topbar" id="header">
         <div class="brand">
@@ -92,20 +90,82 @@
           <span></span><span></span><span></span>
         </button>
       </header>
+  </div>
+    <section class="body-section">
+      <div class="contact-us-title">
+        <h2>Connect with us</h2>
+        <h4>Partner with us to create a lasting change. Together,
+        we can build a sustainable future</h4>
+      </div>
     </section>
 
-    <section class="body-section">
-      <div>
-        <button class="get-involvedBtn">♡ Get Involved</button>
+    <section id="display-rows" style="display:grid;
+        grid-template-columns: repeat(2, minmax(560px, 1fr));
+        align-items:stretch; gap: 40px; padding: 40px; background: white;">
+      <div class="cont-form">
+        <p><b>Reach Out To Us</b></p>
+        <p>Fill Out The Form Below And Our Team Will Get 
+          Back To You Within 3 work days.</p>
+          <form>
+            <label for="name" style="font-weight: 600; color: black;">Full Name *</label>
+            <input id="nameBx" type="text" min="6" placeholder="Enter Your Full Name" required style="border: 1px solid green; justify-content: center;
+             align-items:center; color: rgba(37, 40, 37, 0.7);">
+             
+             <div class="email-phone" style="display: flex; gap: 20px;">
+              <div style:="display: flex; flex-direction: column;">
+                <label for="phone" style="font-weight: 600; color: black;">Phone Number *</label><br>
+                <input id="phoneBx" type="phone" min="8" max="16" placeholder="Enter Your Phone Number" required style="border: 1px solid green; justify-content: center;
+                align-items:center; color: rgba(37, 40, 37, 0.7);">
+              </div>
+              <div style:="display: flex; flex-direction: column;">
+                <label for="email" style="font-weight: 600; color: black;">Email *</label><br>
+                <input id="emailBx" type="email" min="6" placeholder="Enter Your Email" required style="border: 1px solid green; justify-content: center;
+                align-items:center; color: rgba(37, 40, 37, 0.7);"><br>
+              </div>
+            </div>
+              <label for="inquiry" style="font-weight: 600; color: black;">Inquiry Type *</label>
+              <select id="option">
+                <option>General Inquiry</option>
+                <option>Volunteering</option>
+                <option>General Inquiry</option>
+                <option>Partnership</option>
+              </select>
+              <label for="inquiry" style="font-weight: 600; color: black;">Subject *</label>
+              <input id="inquiryBx" type="text" min="6" placeholder="How Can We Help You?" required style="border: 1px solid green; display: flex; justify-content: center;
+                align-items:center; color: rgba(37, 40, 37, 0.7);">
+              <label for="email" style="font-weight: 600; color: black;">Message *</label>
+              <input id= "Msg" type="email" min="6" placeholder="Enter Your Message Here" required style="border: 1px solid green; color: rgba(37, 40, 37, 0.7);"> 
+                <button id="submtBtn">Send Message</button>   
+          </form>
       </div>
-      <div class="contact-us-title">
-        <h1>Contact Us</h1>
-        <h4>Partner with us to create a lasting change. Together,
-           we can build a sustainable future</h4>
+      <div style="display: block; gap: 60px;">
+        <div style="display: block; gap: 50px;" class="side-box">
+          <p>Contact Information</p>
+          <div style="display: flex; gap: 10px; ">
+            <img class="contact-icon" src="../icons and logos/letter.png" style="width: 40px; height: 40px; border-radius: 7px;">
+            <span><b>Email</b><br>yicc@jaf.global</span>
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <img class="contact-icon" src="../icons and logos/phone-call.png" style="width: 40px; height: 40px; border-radius: 7px;">
+            <span><b>Phone</b><br>+250790000000</span>
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <img class="contact-icon" src="../icons and logos/location.png" style="width: 40px; height: 40px; border-radius: 7px;">
+            <span><b>Office</b><br>Norsken House<br>Nyarugenge District<br>Kigali, Rwanda</span>
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <img class="contact-icon" src="../icons and logos/clock.png" style="width: 40px; height: 40px; border-radius: 7px;">
+            <span><b>Office Hours</b><br>Mon - Fri: 9:00 AM - 5:00 PM<br>Weekend: Closed</span>
+          </div>
+        </div>
+        <div class="green-bg">
+          <p><b>Why Connect with YICC?</b></p>
+          <p style="display: flex; gap: 15px;"><img src="../icons and logos/correct.png" style="width: 25px; height:25px;">Immediate Response</p>
+          <p style="display: flex; gap: 15px;"><img src="../icons and logos/correct.png" style="width: 25px; height:25px;">Impact Driven</p>
+          <p style="display: flex; gap: 15px;"><img src="../icons and logos/correct.png" style="width: 25px; height:25px;">Home-grown Solutions</p>
+        </div>
       </div>
-    
     </section>
-  </div>
     <!--Footer and Contacts Page-->
     <div class="black-horizontal-box"></div>
     <div class="white-horizontal-box"></div>

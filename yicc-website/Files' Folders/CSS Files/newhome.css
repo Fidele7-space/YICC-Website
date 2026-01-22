@@ -1416,4 +1416,157 @@
 
 
     /* ========= CONTANT US ========= */
-    
+    /*.body-section{
+        position: relative;
+        background-color: rgba(26, 99, 28, 0.5);
+        display: block;
+        justify-content: center; 
+        align-content: center;
+        text-align: center;
+        color: white;
+    } */
+    .body-section{
+        display: block;
+        justify-content: center; 
+        align-content: center;
+        text-align: center;
+        background: linear-gradient(rgba(20, 107, 32, 0.89), rgba(46, 126, 26, 0.89)),
+        url("../Activity\ pictures/class.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        z-index: -999; 
+        backdrop-filter: blur(2px);
+        color: white;
+        height: 60vh;
+        width: 100%;
+    }   
+    .contact-us-title h2{
+        color: white;
+        font-size: clamp(4rem, 4vw, 18rem)
+    }
+
+    .cont-form{
+      padding: 30px;
+        display: block;
+        background: var(--surface);
+        border-radius: var(--radiusSm);
+        height: auto;
+        box-shadow: var(--shadow);
+    }
+    #nameBx{
+      width: 500px;
+      height: 40px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #phoneBx{
+      width: 240px;
+      height: 40px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #emailBx{
+      width: 240px;
+      height: 40px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #option{
+      width: 500px;
+      height: 40px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #inquiryBx{
+      width: 500px;
+      height: 40px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #Msg{
+      width: 500px;
+      height: 150px;
+      border-radius: 7px;
+      text-align: left;
+      padding-left: 20px;
+    }
+    #submtBtn{
+      width: 500px;
+      height: 40px;
+      border-radius: 7px;
+      font-weight: 700;
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      background: darkgreen;
+    }
+
+    .side-box{
+        padding: 30px;
+        background: var(--surface);
+        border-radius: var(--radiusSm);
+        width: 565px;
+        height: auto;
+        box-shadow: var(--shadow);
+    }
+
+    .green-bg{
+      height: auto;
+      background: linear-gradient(rgba(20, 107, 32, 0.89), rgba(46, 126, 26, 0.89));
+      padding: 25px;
+      border-radius: 7px;
+      margin-top: 20px;
+      font-size: clamp(14px, 15px, 18px);
+      font-weight: 700;
+    }
+
+ /* Mobile-first: Stack everything vertically under 768px */
+@media (max-width: 768px) {
+  #display-rows {
+    grid-template-columns: 1fr !important;  /* 1 column */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .cont-form input,
+  #option, #inquiryBx, #Msg, #submtBtn {
+    width: 100% !important;      /* Full width inputs */
+    margin-bottom: 15px;
+  }
+  
+  #phoneBx, #emailBx {
+    width: 100% !important;      /* Stack phone/email */
+  }
+  
+  .side-box {
+    width: 100% !important;      /* Full width side box */
+  }
+  
+  .email-phone {
+    flex-direction: column !important;  /* Stack phone/email vertically */
+    gap: 10px;
+  }
+}
+
+/* Tablet: 2-column grid under 1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #display-rows {
+    grid-template-columns: 1fr !important;
+    gap: 25px;
+  }
+}
+
+/* Fix body-section mobile height */
+@media (max-width: 768px) {
+  .body-section {
+    height: 50vh !important;     /* Shorter on mobile */
+    background-attachment: scroll !important;  /* No fixed bg on mobile */
+  }
+}
