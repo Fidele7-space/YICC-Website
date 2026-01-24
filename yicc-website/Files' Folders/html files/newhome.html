@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../icons and logos/yicc logo.png">
     <link rel="stylesheet" href="../CSS Files/newhome.css">
-    
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <title>YICC</title>
 </head>
 <body>
@@ -126,12 +126,12 @@
       <div class="elements">
         <div class="Elements-content">
             <img src="../icons and logos/yicc logo.png" alt="">
-            <h1>1350+</h1>
+            <h1 id="count_1">1350+</h1>
             <span>Students Reached</span>
         </div>
         <div class="Elements-content">
             <img src="../icons and logos/yicc logo.png" alt="">
-            <h1>10+</h1>
+            <h1>200+</h1>
             <span>Trees Planted</span>
         </div>
         <div class="Elements-content">
@@ -402,6 +402,110 @@
           <p class="footer">&copy; 2025 Youth Initiative in Climate Change. All Rights Reserved.</p>
         </footer>
       </div> 
-    <script src="../JS/home.js"></script> 
+    <script>
+      
+  let lastScrollY = window.scrollY;
+  const topbar = document.querySelector(".topbar");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+      // scrolling DOWN
+      topbar.classList.add("topbar--hidden");
+    } else {
+      // scrolling UP
+      topbar.classList.remove("topbar--hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  });
+
+  /*HHHHHHH*/
+
+const counters = document.querySelectorAll(".Elements-content h1");
+const DURATION = 3000; // 3 seconds
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const target = parseInt(counter.innerText.replace("+", ""), 10);
+    let start = null;
+
+    const update = timestamp => {
+      if (!start) start = timestamp;
+      const progress = Math.min((timestamp - start) / DURATION, 1);
+      const value = Math.floor(progress * target);
+
+      counter.innerText = value + "+";
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    requestAnimationFrame(update);
+  });
+};
+
+const observer = new IntersectionObserver(
+  entries => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.disconnect();
+    }
+  },
+  { threshold: 0.4 }
+);
+
+observer.observe(document.querySelector(".elements"));
+
+
+  /* Storing Username and message information */
+ document.addEventListener("DOMContentLoaded", ()=> {
+  const form =document.getElementById('contactForm');
+
+  form.addEventListener("submit", async (e) =>{
+    e.preventDefault(); //preventing page reload
+
+    try{
+      const submitBtn = document.getElementById('#submitBtn').value.trim();
+      const username = document.getElementById('#username').value.trim();
+      const email = document.getElementById('#email').value.trim();
+      const message = document.getElementById('#message');
+
+      if (username.length < 6){
+        throw new Error("Name Full name must be at least 6 characters");
+      }
+      
+      if(!email.contains("@")){
+        throw new Error("Your email should contain @ symbol");
+      }
+
+      if(message.length < 10){
+        throw new Error("The message should be at least 10 characters");
+      }
+      
+    //-----------SEND TO BACKEND-------------
+
+      const response = await fetch("/api/contact", {
+      method: "POST", 
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({username, email, message})
+      });
+
+      if(!response.ok){
+        throw new Error("Something went wrong. Please try again later.");
+      }
+
+      form.reset();
+    } catch(error){
+      alert(error.message);
+    }
+  });
+ });
+
+    </script> 
 </body>
 </html>

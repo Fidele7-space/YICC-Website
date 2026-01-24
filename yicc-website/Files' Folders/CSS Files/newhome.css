@@ -1555,7 +1555,7 @@
   }
 }
 
-/* Tablet: 2-column grid under 1024px */
+/* Tablet: 1-column grid under 1024px */
 @media (max-width: 1024px) and (min-width: 769px) {
   #display-rows {
     grid-template-columns: 1fr !important;
