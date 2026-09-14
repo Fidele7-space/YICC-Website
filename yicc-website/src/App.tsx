@@ -1,24 +1,26 @@
-import React from 'react'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import Counter from './components/Counter'
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import NewHome from './pages/NewHome'
+import About from './pages/About'
+import Programs from './pages/Programs'
+import Impact from './pages/Impact'
+import Team from './pages/Team'
+import Contact from './pages/Contact'
+import Treeplanting from './pages/Treeplanting'
 
 export default function App() {
   return (
-    <div id="app">
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-          <img src={typescriptLogo} className="logo vanilla" alt="TypeScript logo" />
-        </a>
-        <h1>Vite + TypeScript</h1>
-        <div className="card">
-          <Counter />
-        </div>
-        <p className="read-the-docs">Click on the Vite and TypeScript logos to learn more</p>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NewHome />} />
+        <Route path="/newhome" element={<NewHome />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/impact" element={<Impact />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/treeplanting" element={<Treeplanting />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
