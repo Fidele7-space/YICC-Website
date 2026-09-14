@@ -1,114 +1,97 @@
-import React, { useEffect } from 'react'
-import PageLoader from '../components/PageLoader'
-import newhomeHtml from "../Files' Folders/html files/newhome.html?raw"
-import "../Files' Folders/CSS Files/newhome.css"
+import React from 'react'
+import Header from '../components/Header'
+import StatsGrid from '../components/StatsGrid'
+import ProgramCard from '../components/ProgramCard'
+import Footer from '../components/Footer'
 
 export default function NewHome() {
-  useEffect(() => {
-    function onLoaded(e: any) {
-      const containerId = e?.detail?.containerId || ''
-      const root = containerId ? document.getElementById(containerId) : document
-      if (!root) return
+  const stats = [
+    { label: 'Students Reached', value: 1350 },
+    { label: 'Trees Planted', value: 200 },
+    { label: 'Schools Targeted in 2026', value: 65 },
+    { label: 'Core Programs', value: 3 },
+  ]
 
-      // Topbar hide on scroll
-      let lastScrollY = window.scrollY
-      const topbar = root.querySelector('.topbar') as HTMLElement | null
-      if (topbar) {
-        const onScroll = () => {
-          const currentScrollY = window.scrollY
-          if (currentScrollY > lastScrollY && currentScrollY > 50) {
-            topbar.classList.add('topbar--hidden')
-          } else {
-            topbar.classList.remove('topbar--hidden')
-          }
-          lastScrollY = currentScrollY
-        }
-        window.addEventListener('scroll', onScroll)
+  return (
+    <div className="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-white">
+      <Header />
+      <main className="pt-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        {/* Hero */}
+        <section className="text-center py-12">
+          <h1 className="text-2xl sm:text-4xl font-extrabold">Youth Initiative in Climate Change</h1>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            We are young Rwandans committed to creating a launchpad into Rwanda’s sustainable future by inspiring and engaging young Rwandans to commit to and protect the environment.
+          </p>
+          <div className="mt-6">
+            <a href="/programs" className="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-md">Explore Our Programs</a>
+          </div>
 
-        // cleanup
-        ;(onLoaded as any)._cleanup = () => window.removeEventListener('scroll', onScroll)
-      }
+          <div className="mt-8 flex flex-col sm:flex-row justify-center gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold">3</div>
+              <div>
+                <div className="text-sm font-semibold">Core Programs</div>
+                <div className="text-xs text-gray-500">SET · CAR · CMP</div>
+              </div>
+            </div>
 
-      // Counters animation
-      const elementsContainer = root.querySelector('.elements')
-      const counters = elementsContainer ? elementsContainer.querySelectorAll('.Elements-content h1') : []
-      const DURATION = 3000
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center font-bold">65+</div>
+              <div>
+                <div className="text-sm font-semibold">Target Schools</div>
+                <div className="text-xs text-gray-500">Expanding in 2026</div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      const animateCounters = () => {
-        ;(Array.from(counters) as HTMLElement[]).forEach(counter => {
-          const target = parseInt(counter.innerText.replace('+', ''), 10) || 0
-          let start: number | null = null
-          const update = (timestamp: number) => {
-            if (!start) start = timestamp
-            const progress = Math.min((timestamp - start) / DURATION, 1)
-            const value = Math.floor(progress * target)
-            counter.innerText = value + '+'
-            if (progress < 1) {
-              requestAnimationFrame(update)
-            } else {
-              counter.innerText = target + '+'
-            }
-          }
-          requestAnimationFrame(update)
-        })
-      }
+        {/* Stats */}
+        <section>
+          <StatsGrid stats={stats} />
+        </section>
 
-      const observer = new IntersectionObserver(
-        entries => {
-          if (entries[0].isIntersecting) {
-            animateCounters()
-            observer.disconnect()
-          }
-        },
-        { threshold: 0.4 }
-      )
+        {/* Programs */}
+        <section>
+          <div className="text-center mb-6">
+            <h2 className="text-xl font-bold">Our Programs</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Three comprehensive initiatives working together to empower Rwandan youth to become climate leaders through education, innovation, and action.</p>
+          </div>
 
-      if (elementsContainer) observer.observe(elementsContainer)
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <ProgramCard img="/assets/microphone.png" title="SET Program" subtitle="Sensitization, Engagement & Transformation">
+              Raising awareness and transforming youth into active environment guardians through education and youth-driven activism.
+            </ProgramCard>
+            <ProgramCard img="/assets/climate.png" title="CAR Program" subtitle="Climate Adaptation in Rwanda">
+              Empowering youth to develop innovative adaptation solutions for climate resilience in vulnerable communities.
+            </ProgramCard>
+            <ProgramCard img="/assets/climate-change.png" title="CMP Program" subtitle="Climate Mitigation Program">
+              Reducing greenhouse gas emissions through tree planting, renewable energy promotion and sustainable practices.
+            </ProgramCard>
+          </div>
+        </section>
 
-      // Contact form handling (basic validation + fetch)
-      const form = root.querySelector('#contactForm') as HTMLFormElement | null
-      if (form) {
-        const submitHandler = async (ev: Event) => {
-          ev.preventDefault()
-          try {
-            const usernameEl = form.querySelector('#username') as HTMLInputElement | null
-            const emailEl = form.querySelector('#email') as HTMLInputElement | null
-            const messageEl = form.querySelector('#message') as HTMLTextAreaElement | null
-            const username = usernameEl?.value.trim() || ''
-            const email = emailEl?.value.trim() || ''
-            const message = messageEl?.value.trim() || ''
+        {/* Mission */}
+        <section>
+          <h2 className="text-center text-xl font-bold">Our Mission</h2>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-center">To empower Rwandan high school students and youth to become environmental leaders of tomorrow, ensuring that climate solutions extend from local communities to the global stage.</p>
+        </section>
 
-            if (username.length < 6) throw new Error('Full name must be at least 6 characters')
-            if (!email.includes('@')) throw new Error('Your email should contain @ symbol')
-            if (message.length < 10) throw new Error('The message should be at least 10 characters')
+        {/* Join section */}
+        <section className="bg-white/5 p-6 rounded">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-1">
+              <a className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded" href="#username">Join The Movement</a>
+              <h3 className="mt-4 text-2xl font-semibold">Together, We Can Make a Difference</h3>
+              <p className="mt-2 text-gray-600 dark:text-gray-300">Whether you are a student, educator, innovator, organization — there is a space for you to take part in Rwanda's future.</p>
+            </div>
+            <div className="w-full sm:w-1/3">
+              <img src="/assets/class.jpeg" alt="class" className="w-full rounded" />
+            </div>
+          </div>
+        </section>
+      </main>
 
-            const response = await fetch('/api/contact', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ username, email, message }),
-            })
-            if (!response.ok) throw new Error('Something went wrong. Please try again later.')
-            form.reset()
-          } catch (err: any) {
-            alert(err.message || 'Form error')
-          }
-        }
-        form.addEventListener('submit', submitHandler)
-        ;(onLoaded as any)._cleanupForm = () => form.removeEventListener('submit', submitHandler)
-      }
-    }
-
-    window.addEventListener('pageContentLoaded', onLoaded)
-    // also try to run if content already present
-    window.dispatchEvent(new CustomEvent('pageContentLoaded', { detail: { containerId: 'newhome-root' } }))
-
-    return () => {
-      window.removeEventListener('pageContentLoaded', onLoaded)
-      // attempt to call any cleanup attached
-      if ((onLoaded as any)._cleanup) (onLoaded as any)._cleanup()
-      if ((onLoaded as any)._cleanupForm) (onLoaded as any)._cleanupForm()
-    }
-  }, [])
-
-  return <PageLoader html={newhomeHtml} containerId="newhome-root" />
+      <Footer />
+    </div>
+  )
 }
